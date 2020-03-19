@@ -1,0 +1,18 @@
+In this task there was no real need for OO design. I have gone for the simple, obvious thing.
+
+I considered adding an interface for Compass, perhaps to allow another implementation to support 45 degree turns. 
+This would have had some impact on the code, since the Vectors properties would then have to be of type double, and cast back to an int on moving the Rover. Perhaps the grid position would also be specified in doubles.
+I decided against this, since the cardinal points of the Compass seem an inherent part of this problem.
+I would prefer to come back later and do some simple refactoring, rather than overcomplicate now for speculative requirements.
+
+I also considered implementing this in a functional style. Rover would become immutable. All operations on Rover would return a new Rover instance. 
+This might be useful if there was a requirement to maintain a trail of every Rover position. It would also easily support a set of undo steps, telling the Rover to retrace its steps back to the start.
+I am comfortable with both OO and functional styles.
+
+Coordinates possibly should have been expressed as uints, rather than ints.
+
+The Navigation and Parsing logic are well unit tested. I have not tested bad inputs into constructors, where these are covered by validation checks in code. This has been the policy in my last couple of teams. 
+In other teams we have written explicit unit tests for this. I am happy to fit in with the coding standards of wherever I am working.
+
+
+
